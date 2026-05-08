@@ -164,7 +164,7 @@ public class AuthorizationAndMiddlewareTests
         {
             GetUserCallCount++;
             LastRequestedId = id;
-            return _returnUser!;
+            return _returnUser ?? throw new InvalidOperationException("No user configured for FakeUserRepository.");
         }
 
         public ApplicationUser UpdateUser(ApplicationUser user) => user;
