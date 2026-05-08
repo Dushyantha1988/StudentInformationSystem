@@ -28,8 +28,7 @@ public class UserControllerTests
             LastName = "A"
         });
 
-        var ok = Assert.IsType<OkObjectResult>(result);
-        Assert.Equal(200, ok.StatusCode ?? 200);
+        Assert.IsType<OkObjectResult>(result);
     }
 
     [Fact]
